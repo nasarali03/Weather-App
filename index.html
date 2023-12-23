@@ -10,63 +10,51 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Weather app</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
 
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
     <section class="vh-100" style="background-color: #4B515D;">
-        <div class="container py-5 h-100">
 
-            <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="container py-5 h-100">
+            <div class="row d-flex flex-column justify-content-center align-items-center h-100">
+
+                <form class="d-flex  m-3 col-md-8 col-lg-6 col-xl-4" role="search" id="form">
+                    <input class="form-control me-2" type="search" id="city" placeholder="Enter City Name"
+                        aria-label="Search">
+                    <button class="btn btn-dark" type="submit">Search</button>
+                </form>
                 <div class="col-md-8 col-lg-6 col-xl-4">
 
                     <div class="card" style="color: #4B515D; border-radius: 35px;">
                         <div class="card-body p-4">
 
                             <div class="d-flex">
-                                <h6 class="flex-grow-1">Warsaw</h6>
-                                <h6>15:07</h6>
+                                <h6 class="flex-grow-1" id="cityName"></h6>
+                                <h6 id="cityTime"></h6>
                             </div>
 
                             <div class="d-flex flex-column text-center mt-5 mb-4">
-                                <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
-                                <span class="small" style="color: #868B94">Stormy</span>
+                                <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;" id="temperature">
+                                </h6>
+                                <span class="small" style="color: #868B94" id="presentCondition"></span>
                             </div>
 
                             <div class="d-flex align-items-center">
                                 <div class="flex-grow-1" style="font-size: 1rem;">
-                                    <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1">
-                                            40 km/h
+                                    <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"
+                                            id="windSpeed">
+
                                         </span></div>
-                                    <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1">
-                                            84% </span>
+                                    <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"
+                                            id="humidity">
+                                        </span>
                                     </div>
-                                    <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1">
-                                            0.2h </span>
+                                    <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"
+                                            id="">
+                                        </span>
                                     </div>
                                 </div>
-                                <!-- <div>
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
-                                        width="100px">
-                                </div> -->
+                                <div id="image">
+
+                                </div>
                             </div>
 
                         </div>
