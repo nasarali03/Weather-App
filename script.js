@@ -12,6 +12,8 @@ form.addEventListener("submit", async (event) => {
   const windSpeed = document.getElementById("windSpeed");
   const humidity = document.getElementById("humidity");
   const imageIcon = document.getElementById("image");
+  const windIcon = document.getElementById("windIcon");
+  const humidityIcon = document.getElementById("humidityIcon");
 
   console.log("hellow");
   let response;
@@ -56,8 +58,10 @@ form.addEventListener("submit", async (event) => {
   let windSpeedinKph = windSpeedinMps * 3.6;
   windSpeedinKph = Math.floor(windSpeedinKph);
   windSpeed.innerText = `${windSpeedinKph}Km/h`;
+  windIcon.style.display = "inline";
 
   humidity.innerText = `${response.main.humidity}%`;
+  humidityIcon.style.display = "inline";
 
   const icon = response.weather[0].icon;
   imageIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" width="100px"> `;
