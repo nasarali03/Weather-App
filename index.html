@@ -14,17 +14,28 @@
     <section class="vh-100" style="background-color: #4B515D;">
 
         <div class="container py-5 h-100">
-            <div class="row d-flex flex-column justify-content-center align-items-center h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
 
-                <form class="d-flex  m-3 col-md-8 col-lg-6 col-xl-4" role="search" id="form">
-                    <input class="form-control me-2" type="search" id="city" placeholder="Enter City Name"
-                        aria-label="Search">
-                    <button class="btn btn-dark" type="submit">Search</button>
-                </form>
-                <div class="col-md-8 col-lg-6 col-xl-4">
+
+                <div class=" col-md-8 col-lg-6 col-xl-4">
+
+
 
                     <div class="card" style="color: #4B515D; border-radius: 35px;">
-                        <div class="card-body p-4">
+
+                        <div style="display: flex; justify-content: center; align-items: center; margin: 20px;">
+                            <form role="search" id="form" style="display: flex;">
+                                <input class="form-control me-1" type="search" id="city" placeholder="Enter City Name"
+                                    aria-label="Search">
+                                <button class="btn btn-dark" type="submit">Search</button>
+                            </form>
+                        </div>
+
+
+                        <div class="error text-center m-10 " style="display: none;">
+                            <p style="color: black;">Invalid city name</p>
+                        </div>
+                        <div class="weather card-body p-4">
 
                             <div class="d-flex">
                                 <h6 class="flex-grow-1" id="cityName"></h6>
